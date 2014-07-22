@@ -16,4 +16,13 @@ class My_Vector < Vector
     Math.sqrt((vector[0] - self[0])**2 + (vector[1] - self[1])**2)
   end
 
+  def <<(int)
+    array = []
+    self.each do |i|
+      array << i
+    end
+    array << int
+    My_Vector.[](array)
+  end
+
 end
